@@ -1,0 +1,8 @@
+.layout {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    &__content {
+        max-width: 1000px;
+    }
+}
