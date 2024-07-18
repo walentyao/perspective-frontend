@@ -1,7 +1,8 @@
 import { createBrowserRouter } from 'react-router-dom';
 import { LayoutApp } from '@shared/layouts/LayoutApp/LayoutApp';
-import { Sidebar } from '@widgets/Sidebar/ui/Sidebar';
+import { Sidebar } from '@widgets/Sidebar/ui/Sidebar/Sidebar';
 import { Header } from '@widgets/Header';
+import { RouterPaths } from '@shared/constants/router.constants';
 
 export const router = createBrowserRouter([
     {
@@ -14,7 +15,7 @@ export const router = createBrowserRouter([
         ),
         children: [
             {
-                path: '/',
+                path: RouterPaths.MAIN,
                 index: true,
                 lazy: async () => {
                     const { MainPage } = await import('@pages/MainPage/MainPage.tsx');
@@ -22,7 +23,7 @@ export const router = createBrowserRouter([
                 },
             },
             {
-                path: '/courses',
+                path: RouterPaths.COURSES,
                 lazy: async () => {
                     const { CoursesPage } = await import(
                         '@pages/CoursesPage/ui/CoursesPage/CoursesPage.tsx'

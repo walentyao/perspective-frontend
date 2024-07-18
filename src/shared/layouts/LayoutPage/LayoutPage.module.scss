@@ -3,6 +3,7 @@
     justify-content: center;
     height: 100%;
     &__content {
+        flex: 1;
         max-width: 1000px;
     }
 }
